@@ -13,43 +13,43 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 3. set autoload.php
 
 ``` php
-    $loader->registerNamespaces(array(
-         //...//
-         'LK'          => __DIR__.'/../src',
-         'LaKrue'          => __DIR__.'/../src',
-         //...//
-    ));
+$loader->registerNamespaces(array(
+     //...//
+     'LK'          => __DIR__.'/../src',
+     'LaKrue'          => __DIR__.'/../src',
+     //...//
+));
 ````
 
 4. set AppKernel.php
 
 ``` php
-    $bundles = array(
-        //...//
-        new LK\TwigtringBundle\LKTwigstringBundle(),
-        //...//
-    );
+$bundles = array(
+    //...//
+    new LK\TwigtringBundle\LKTwigstringBundle(),
+    //...//
+);
 ```
 
 5. use LK/TwigstringBundle:
 
 ``` php
-    // set example parameter
-    $vars = array('var'=>'x');
-    // get renderstring service
-    $tpl_engine = $this->get('twigstring');
-    // render example string
-    $vars['test'] = 'u ' . $tpl_engine->render('v {{ var }} {% if var is defined %} y {% endif %} z{% for i in 1..5 %} {{ i }}{% endfor %}', $vars);
+// set example parameter
+$vars = array('var'=>'x');
+// get renderstring service
+$tpl_engine = $this->get('twigstring');
+// render example string
+$vars['test'] = 'u ' . $tpl_engine->render('v {{ var }} {% if var is defined %} y {% endif %} z{% for i in 1..5 %} {{ i }}{% endfor %}', $vars);
 ```
 
 or use the short way:
 
 ``` php
-    // set example parameter
-    $vars = array('var'=>'x');
+// set example parameter
+$vars = array('var'=>'x');
 
-    // render example string
-    $vars['test'] = 'u ' . $this->get('twigstring')->render('v {{ var }} {% if var is defined %} y {% endif %} z{% for i in 1..5 %} {{ i }}{% endfor %}', $vars);
+// render example string
+$vars['test'] = 'u ' . $this->get('twigstring')->render('v {{ var }} {% if var is defined %} y {% endif %} z{% for i in 1..5 %} {{ i }}{% endfor %}', $vars);
 ```
 
 
