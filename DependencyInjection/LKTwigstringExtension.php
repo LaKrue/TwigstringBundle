@@ -38,7 +38,7 @@ class LKTwigstringExtension extends Extension
 
         $processor = new Processor();
         $configuration = new Configuration($container->getParameter('kernel.debug'));
-        $config = $processor->processConfiguration($configuration, $configs);
+        $config = $processor->process($configuration->getConfigTree(), $configs);
     }
 
     /**
@@ -48,7 +48,7 @@ class LKTwigstringExtension extends Extension
      */
     public function getXsdValidationBasePath()
     {
-        return __DIR__.'/../Resources/config/schema';
+        return null;
     }
 
     /**
@@ -58,6 +58,11 @@ class LKTwigstringExtension extends Extension
      */
     public function getNamespace()
     {
-        return 'http://lakrue.com/schema/dic/renderstring';
+        return 'http://symfony.com/schema/dic/symfony';
+    }
+
+    public function getAlias()
+    {
+        return 'twigstring';
     }
 }
