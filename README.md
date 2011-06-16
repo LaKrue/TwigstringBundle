@@ -11,6 +11,7 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
     `lk_twigstring: ~`
 
 3. set autoload.php
+
 ``` php
     $loader->registerNamespaces(array(
          //...//
@@ -21,6 +22,7 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 ````
 
 4. set AppKernel.php
+
 ``` php
     $bundles = array(
         //...//
@@ -30,6 +32,7 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 ```
 
 5. use LK/TwigstringBundle:
+
 ``` php
     // set example parameter
     $vars = array('var'=>'x');
@@ -40,6 +43,7 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 ```
 
 or use the short way:
+
 ``` php
     // set example parameter
     $vars = array('var'=>'x');
