@@ -3,7 +3,7 @@
  * (c) LaKrue <symfony@lakrue.com>
  */
 
-namespace LaKrue\RenderStringBundle\DependencyInjection;
+namespace LK\TwigstringBundle\DependencyInjection;
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
@@ -17,7 +17,7 @@ use Symfony\Component\Config\Definition\Processor;
  *
  * @author LaKrue <symfony@lakrue.com>
  */
-class LaKrueRenderStringExtension extends Extension
+class LKTwigstringExtension extends Extension
 {
     /**
      * Loads the RenderString configuration.
@@ -34,7 +34,7 @@ class LaKrueRenderStringExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
-        $container->setAlias('renderstring', 'templating.engine.twig2');
+        $container->setAlias('twigstring', 'templating.engine.twig2');
 
         $processor = new Processor();
         $configuration = new Configuration($container->getParameter('kernel.debug'));

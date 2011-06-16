@@ -3,7 +3,7 @@
  * (c) LaKrue <symfony@lakrue.com>
  */
 
-namespace LaKrue\RenderStringBundle\DependencyInjection;
+namespace LK\TwigstringBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
@@ -22,7 +22,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
     	$treeBuilder = new TreeBuilder();
-    	$rootNode = $treeBuilder->root('renderstring');
+    	$rootNode = $treeBuilder->root('lk_twigstring');
 
 		return $treeBuilder;
     }

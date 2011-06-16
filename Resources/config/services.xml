@@ -6,7 +6,7 @@
 
     <parameters>
         <parameter key="twig2.class">Twig_Environment</parameter>
-        <parameter key="twig2.loader.class">LaKrue\RenderStringBundle\Loader\String</parameter>
+        <parameter key="twig2.loader.class">LK\TwigstringBundle\Loader\String</parameter>
         <parameter key="templating.engine.twig2.class">Symfony\Bundle\TwigBundle\TwigEngine</parameter>
     </parameters>
 

@@ -3,7 +3,7 @@
  * (c) LaKrue <symfony@lakrue.com>
  */
 
-namespace LaKrue\RenderStringBundle\Loader;
+namespace LK\TwigstringBundle\Loader;
 
 class String extends \Twig_Loader_String
 {

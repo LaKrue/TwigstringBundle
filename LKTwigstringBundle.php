@@ -3,12 +3,12 @@
  * (c) LaKrue <symfony@lakrue.com>
  */
 
-namespace LaKrue\RenderStringBundle;
+namespace LK\TwigstringBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class LaKrueRenderStringBundle extends Bundle
+class LKTwigstringBundle extends Bundle
 {
 	
 }
