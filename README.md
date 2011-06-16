@@ -24,7 +24,6 @@ Update autoload.php
 $loader->registerNamespaces(array(
      //...//
      'LK'          => __DIR__.'/../src',
-     'LaKrue'          => __DIR__.'/../src',
      //...//
 ));
 ````
