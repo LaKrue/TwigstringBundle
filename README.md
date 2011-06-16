@@ -6,12 +6,12 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 Install on your project:
 ------------------------
 
-    `git submodule add git://github.com/LaKrue/TwigstringBundle.git src/LK/TwigstringBundle`
+    git submodule add git://github.com/LaKrue/TwigstringBundle.git src/LK/TwigstringBundle
 
 Set configuration on config.yml (as top level entry):
 -----------------------------------------------------
 
-    `lk_twigstring: ~`
+    lk_twigstring: ~
 
 Update autoload.php
 -------------------
@@ -63,7 +63,8 @@ $vars['test'] = 'u ' . $this->get('twigstring')->render('v {{ var }} {% if var i
 Example output:
 ---------------
 
-    `u v x y z`
+    u v x y z
+
 
 Authors:
 --------
