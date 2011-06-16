@@ -8,6 +8,7 @@ The only difference is that the first argument of the method `render(<string>, [
 One example usage scenario is to load templates from the database instead of using files.
 
 Extension ideas:
+
 * add a black-/whitelist for allowed allowed twig tags
 
 Install on your project:
