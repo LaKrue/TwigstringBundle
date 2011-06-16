@@ -5,10 +5,13 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 The Bundle adds an additional service named `twigstring`. It is used the same way as the original templating service.
 The only difference is that the first argument of the method `render(<string>, [<array])` is a string to parse instead of a template file.
 
+The bundles supports variable output, conditions, loops and rendering of an controller. It does NOT support including templates, yet. It would interpret the template name as twigstring.
+
 One example usage scenario is to load templates from the database instead of using files.
 
 Extension ideas:
 
+* option to include templates
 * add a black-/whitelist for allowed allowed twig tags
 
 Install on your project:
