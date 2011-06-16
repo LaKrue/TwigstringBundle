@@ -34,11 +34,11 @@ class LaKrueRenderStringExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
-        $container->setAlias('renderstring', 'templating.engine.twig2');
+        $container->setAlias('la_krue_render_string', 'templating.engine.twig2');
 
         $processor = new Processor();
         $configuration = new Configuration($container->getParameter('kernel.debug'));
-        $config = $processor->processConfiguration($configuration, $configs);
+        $config = $processor->process($configuration->getConfigTree(), $configs);
     }
 
     /**
@@ -48,7 +48,7 @@ class LaKrueRenderStringExtension extends Extension
      */
     public function getXsdValidationBasePath()
     {
-        return __DIR__.'/../Resources/config/schema';
+        return null;
     }
 
     /**
@@ -58,6 +58,11 @@ class LaKrueRenderStringExtension extends Extension
      */
     public function getNamespace()
     {
-        return 'http://lakrue.com/schema/dic/renderstring';
+        return 'http://symfony.com/schema/dic/symfony';
+    }
+
+    public function getAlias()
+    {
+        return 'la_krue_render_string';
     }
 }
