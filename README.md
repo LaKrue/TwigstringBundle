@@ -3,17 +3,17 @@ TwigstringBundle information & howto
 
 This Symfony2 Bundle adds the possibility to render strings instead of files with the Symfony2 native Twig templating engine.
 
-1. install on your project:
----------------------------
+Install on your project:
+------------------------
 
     `git submodule add git://github.com/LaKrue/TwigstringBundle.git src/LK/TwigstringBundle`
 
-2. set configuration on config.yml (as top level entry):
---------------------------------------------------------
+Set configuration on config.yml (as top level entry):
+-----------------------------------------------------
 
     `lk_twigstring: ~`
 
-3. set autoload.php
+Update autoload.php
 -------------------
 
 ``` php
@@ -25,7 +25,7 @@ $loader->registerNamespaces(array(
 ));
 ````
 
-4. set AppKernel.php
+Update AppKernel.php
 --------------------
 
 ``` php
@@ -36,14 +36,14 @@ $bundles = array(
 );
 ```
 
-5. use LK/TwigstringBundle:
----------------------------
+Use LK/TwigstringBundle:
+------------------------
 
 ``` php
 // set example parameter
 $vars = array('var'=>'x');
 
-// get renderstring service
+// get twigstring service
 $tpl_engine = $this->get('twigstring');
 
 // render example string
@@ -60,7 +60,10 @@ $vars = array('var'=>'x');
 $vars['test'] = 'u ' . $this->get('twigstring')->render('v {{ var }} {% if var is defined %} y {% endif %} z{% for i in 1..5 %} {{ i }}{% endfor %}', $vars);
 ```
 
-output would be: u v x y z
+Example output:
+---------------
+
+    `u v x y z`
 
 Authors:
 --------
