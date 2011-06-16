@@ -1,10 +1,10 @@
 This Symfony2 Bundle adds the possibility to render strings instead of files with the Symfony2 native Twig templating engine.
 
-    git remote add upstream https://github.com/LaKrue/RenderStringBundle.git
+    git remote add upstream https://github.com/LaKrue/TwigstringBundle.git
 
 1. install on your project:
 
-    git submodule add git://github.com/LaKrue/RenderStringBundle.git src/LaKrue/RenderStringBundle
+    git submodule add git://github.com/LaKrue/TwigstringBundle.git src/LK/TwigstringBundle
 
 2. set configuration on config.yml (as top level entry):
 
@@ -14,7 +14,7 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 
     $loader->registerNamespaces(array(
          //...//
-         'LaKrue'          => __DIR__.'/../src',
+         'LK'          => __DIR__.'/../src',
          //...//
     ));
 
@@ -22,17 +22,17 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 
     $bundles = array(
         //...//
-        new LaKrue\RenderStringBundle\LaKrueRenderStringBundle(),
+        new LK\TwigtringBundle\LKTwigstringBundle(),
         //...//
     );
 
-5. use RenderStringBundle:
+5. use LK/TwigstringBundle:
 
     // set example parameter
     $vars = array('var'=>'x');
 
     // get renderstring service
-    $tpl_engine = $this->get('renderstring');
+    $tpl_engine = $this->get('twigstring');
 
     // render example string
     $vars['test'] = 'u ' . $tpl_engine->render('v {{ var }} {% if var is defined %} y {% endif %} z{% for i in 1..5 %} {{ i }}{% endfor %}', $vars);
