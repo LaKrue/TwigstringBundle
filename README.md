@@ -8,7 +8,7 @@ This Symfony2 Bundle adds the possibility to render strings instead of files wit
 
 2. set configuration on config.yml (as top level entry):
 
-    renderstring:
+    lk_twigstring: ~
 
 3. set autoload.php
 
