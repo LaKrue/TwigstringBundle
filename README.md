@@ -41,7 +41,7 @@ Update AppKernel.php
 ``` php
 $bundles = array(
     //...//
-    new LK\TwigtringBundle\LKTwigstringBundle(),
+    new LK\TwigstringBundle\LKTwigstringBundle(),
     //...//
 );
 ```
