@@ -24,7 +24,7 @@
         <service id="templating.engine.twig2" class="%templating.engine.twig2.class%" public="false">
             <argument type="service" id="twig2" />
             <argument type="service" id="templating.name_parser" />
-            <argument type="service" id="templating.globals" />
+            <argument type="service" id="templating.locator" />
         </service>
     </services>
 
