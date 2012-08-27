@@ -1,5 +1,5 @@
 {
-    "name": " lk/twigstringbundle",
+    "name": "lk/twigstringbundle",
     "type": "library",
     "description": "TwigstringBundle adds the possibility to render strings instead of files with the Symfony2 native Twig templating engine",
     "keywords": ["twig","templating"],
